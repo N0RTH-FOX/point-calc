@@ -33,6 +33,7 @@ p{
 }
 input{
   width: 100vw;
+  font-size: 5rem;
 }
     </style>
   </head>
@@ -41,8 +42,10 @@ input{
     <div id="button">
       <p id="point-counter">0</p>
     </div>
-    <input type="password" id="pass-box">
-    <input type="number" id="num-box">
+    <input type="password" id="pass-box" placeholder="パスワード">
+    <input type="number" id="num-box" placeholder="数値(半角)">
+
+
     <script>
       const button = document.getElementById("button");
       const pointCounter = document.getElementById("point-counter");
