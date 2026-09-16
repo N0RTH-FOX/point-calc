@@ -49,8 +49,10 @@ let point = 0;
 if(localStorage.getItem('point') === null){
   point = 0;
 }else{
-  point = localStorage.getItem('point');
+  point = parseInt(localStorage.getItem('point'), 10);
 }
+
+pointCounter.innerText=point.toString();
 
 button.addEventListener("click",()=>{
   if(passBox.value == "abc" && numBox.value
