@@ -49,14 +49,17 @@ input{
 
 
     <script>
-      const button = document.getElementById("button");
-      const pointCounter = document.getElementById("point-counter");
-      let point = 0;
+const button = document.getElementById("button");
+const pointCounter = document.getElementById("point-counter");
+const passBox = document.getElementById("pass-box");
+const numBox = document.getElementById("num-box");
+let point = 0;
 
-      button.addEventListener("click", () => {
-        point++;
-        pointCounter.innerText = point.toString();
-      });
+button.addEventListener("click",()=>{
+  if(passBox.value == "abc")
+    point+=parseInt(numBox.value, 10)
+    pointCounter.innerText=point.toString()
+}
     </script>
   </body>
 </html>
