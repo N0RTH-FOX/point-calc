@@ -45,7 +45,8 @@ const numBox = document.getElementById("num-box");
 let point = 0;
 
 pointCounter.addEventListener("click",()=>{
-  if(passBox.value == "abc"){
+  if(passBox.value == "abc" && numBox.value
+!=""){
     point+=parseInt(numBox.value, 10)
     pointCounter.innerText=point.toString()
 }})
