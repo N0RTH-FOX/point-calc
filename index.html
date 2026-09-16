@@ -1,22 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
   <head>
-    <title>ポイント確認用</head>
+    <meta charset="UTF-8">
+    <title>ポイント確認用</title>
+    <style>
+      h1::before {
+        content: ":";
+      }
+    </style>
   </head>
   <body>
     <h1>現在のポイント</h1>
-    <div id="button"><p id="point-counter">0</p></div>
-    <style>
-      h1::before{content: ":";}
-    </style>
-    <script>
-const button = document.getElementById("button");
-const pointCounter = document.getElementById("point-counter")
-var point = 0;
+    <div id="button">
+      <p id="point-counter">0</p>
+    </div>
 
-button.addEventListener("click",()=>{
-point++;
-pointCounter.innerText = point.toString();
-})
+    <script>
+      const button = document.getElementById("button");
+      const pointCounter = document.getElementById("point-counter");
+      let point = 0;
+
+      button.addEventListener("click", () => {
+        point++;
+        pointCounter.innerText = point.toString();
+      });
     </script>
   </body>
 </html>
