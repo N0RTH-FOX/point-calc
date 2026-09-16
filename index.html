@@ -15,22 +15,14 @@ h1{
   text-align: center;
   font-size: 6.4rem;
 }
-div{
-  margin: 0 calc(50vw - 14.4rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1/1;
-  background: #000;
-  border-radius: 100%;
-  height: 30rem;
-}
 p{
+  display: block;
+  width: 100vw;
   text-align: center;
   font-weight: bold;
   font-size: 20rem;
   line-height: 30rem;
-  color: #fff;
+  color: #000;
 }
 input{
   width: calc(100vw - 10rem);
@@ -41,21 +33,18 @@ input{
   </head>
   <body>
     <h1>現在のポイント</h1>
-    <div id="button">
-      <p id="point-counter">0</p>
-    </div>
+    <p id="point-counter">0</p>
     <input type="password" id="pass-box" placeholder="パスワード">
     <input type="number" id="num-box" placeholder="数値(半角)">
 
 
     <script>
-const button = document.getElementById("button");
 const pointCounter = document.getElementById("point-counter");
 const passBox = document.getElementById("pass-box");
 const numBox = document.getElementById("num-box");
 let point = 0;
 
-button.addEventListener("click",()=>{
+pointCounter.addEventListener("click",()=>{
   if(passBox.value == "abc"){
     point+=parseInt(numBox.value, 10)
     pointCounter.innerText=point.toString()
