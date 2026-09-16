@@ -8,26 +8,31 @@
   margin: 0;
   padding: 0;
 }
+body{
+  overflow-x: auto;
+  position: sticky;
+}
+
 h1{
-  padding: .3rem;
-  margin: 3rem 0;
-  width: 100vw;
+  padding: calc(7px * .3);
+  margin: calc(7px * 3) 0;
+  width: 99vw;
   text-align: center;
-  font-size: 6.4rem;
+  font-size: calc(7px * 6.4);
 }
 p{
   display: block;
-  width: 100vw;
+  width: 99vw;
   text-align: center;
   font-weight: bold;
-  font-size: 20rem;
-  line-height: 30rem;
+  font-size: calc(7px * 20);
+  line-height: calc(7px * 30);
   color: #000;
 }
 input,button{
-  width: calc(100vw - 10rem);
-  font-size: 5rem;
-  margin: 1rem 5rem;
+  width: calc(99vw - calc(7px * 10));
+  font-size: calc(7px * 5);
+  margin: 1rem calc(7px * 5);
 }
     </style>
   </head>
