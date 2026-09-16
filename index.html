@@ -46,6 +46,12 @@ const passBox = document.getElementById("pass-box");
 const numBox = document.getElementById("num-box");
 let point = 0;
 
+if(localStorage.getItem('point') === null){
+  point = 0;
+}else{
+  point = localStorage.getItem('point');
+}
+
 button.addEventListener("click",()=>{
   if(passBox.value == "abc" && numBox.value
 !=""){
@@ -53,6 +59,7 @@ button.addEventListener("click",()=>{
     pointCounter.innerText=point.toString()
     passBox.value="";
     numBox.value="";
+    localStorage.setItem('point',point);
 }})
     </script>
   </body>
