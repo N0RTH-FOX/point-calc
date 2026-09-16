@@ -36,15 +36,17 @@ input{
     <p id="point-counter">0</p>
     <input type="password" id="pass-box" placeholder="パスワード">
     <input type="number" id="num-box" placeholder="数値(半角)">
+    <button id="button">Submit!</button>
 
 
     <script>
+const button = document.getElementById("button");
 const pointCounter = document.getElementById("point-counter");
 const passBox = document.getElementById("pass-box");
 const numBox = document.getElementById("num-box");
 let point = 0;
 
-pointCounter.addEventListener("click",()=>{
+button.addEventListener("click",()=>{
   if(passBox.value == "abc" && numBox.value
 !=""){
     point+=parseInt(numBox.value, 10)
