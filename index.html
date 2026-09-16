@@ -4,16 +4,18 @@
   </head>
   <body>
     <h1>現在のポイント</h1>
-    <div id="button"><p>0</p></div>
+    <div id="button"><p id="point-counter">0</p></div>
     <style>
       h1::before{content: ":";}
     </style>
     <script>
 const button = document.getElementById("button");
+const point-counter = document.getElementById("point-counter")
 var point = 0;
 
 button.addEventListener("click",()=>{
-
+point++;
+point-counter.innerText = point.toString();
 })
     </script>
   </body>
